@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Landing Page</title>
+</head>
+<body>
+<form action='/questions/0', method="POST">
+<h1>{{ title }}</h1>
+<p>{{ instructions }}</p>
+<button type="submit">Continue</button>
+</form>
+  
+</body>
+</html> -->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<form action="{{url}}" method="POST">
+  <h1>{{ title }}</h1>
+  <p>{{ instructions }}</p>
+  <input type="radio" name="surveys" value="satisfaction"> {{ satisfaction.title }}<br>
+  <input type="radio" name="surveys" value="personality"> {{ personality.title }}<br>
+
+  <button type="submit">Continue</button>
+  </form>
+  
+{% endblock %}

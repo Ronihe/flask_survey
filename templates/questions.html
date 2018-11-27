@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Question</title>
+</head>
+<body>
+  <form action="{{ link }}" method="POST">
+  <p>{{ question }}</p>
+<input type="text">  --> 
+  <!-- {% if not num == 2 %} -->
+  <!-- if not num == 2  -->
+    <!-- <input type="radio" name="res" value="yes"> Yes<br>
+    <input type="radio" name="res" value="no"> No<br>
+  {% endif %} -->
+
+  <!-- if num ==2 -->
+  <!-- {% if num == 2 %}
+    <input type="radio" name="res" value="less_than_1000_dollars"> less_than_1000_dollars<br>
+    <input type="radio" name="res" value="1000_or_more"> 1000_or_more<br>
+  {% endif %}
+  <button type="submit">Next Question</button>
+</form>
+  
+</body> -->
+<!-- </html> --> 
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form action="{{ link }}" method="POST">
+    <p>{{ question }}</p>
+    <!-- <input type="text">  --> 
+    {% if not num == 2 %}
+    <!-- if not num == 2  -->
+      <input type="radio" name="res" value="yes"> Yes<br>
+      <input type="radio" name="res" value="no"> No<br>
+    {% endif %}
+  
+    <!-- if num ==2 -->
+    {% if num == 2 %}
+      <input type="radio" name="res" value="less_than_1000_dollars"> less_than_1000_dollars<br>
+      <input type="radio" name="res" value="1000_or_more"> 1000_or_more<br>
+    {% endif %}
+    <button type="submit">Next Question</button>
+  </form>
+  
+
+
+  
+{% endblock %}
